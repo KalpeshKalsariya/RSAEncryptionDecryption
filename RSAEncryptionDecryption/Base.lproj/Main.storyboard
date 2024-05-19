@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RSAEncryptionDecryption" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgD-rm-3u3" customClass="DesignableView" customModule="RSAEncryptionDecryption" customModuleProvider="target">
+                                <rect key="frame" x="59" y="358.66666666666669" width="275" height="160.00000000000006"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAB-xh-JdB">
+                                        <rect key="frame" x="25" y="25" width="225" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="rgS-iv-yiM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldTrimWhitespace" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEo-5b-EUc">
+                                        <rect key="frame" x="37.666666666666686" y="95" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="y5Q-yV-tgR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Tap to Encrypt/Decrypt"/>
+                                        <connections>
+                                            <action selector="btnTapEncriptDescrypt_Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="is4-xw-cx9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vEo-5b-EUc" firstAttribute="centerX" secondItem="YgD-rm-3u3" secondAttribute="centerX" id="1Ac-oO-hyg"/>
+                                    <constraint firstItem="dAB-xh-JdB" firstAttribute="top" secondItem="YgD-rm-3u3" secondAttribute="top" constant="25" id="EN3-3v-TwY"/>
+                                    <constraint firstAttribute="trailing" secondItem="dAB-xh-JdB" secondAttribute="trailing" constant="25" id="JMk-bP-WT1"/>
+                                    <constraint firstItem="dAB-xh-JdB" firstAttribute="leading" secondItem="YgD-rm-3u3" secondAttribute="leading" constant="25" id="WpP-pM-dzW"/>
+                                    <constraint firstItem="vEo-5b-EUc" firstAttribute="top" secondItem="dAB-xh-JdB" secondAttribute="bottom" constant="25" id="r9S-2e-ah8"/>
+                                    <constraint firstAttribute="bottom" secondItem="vEo-5b-EUc" secondAttribute="bottom" constant="25" id="wLH-NG-Owo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YgD-rm-3u3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="89w-DJ-Mp3"/>
+                            <constraint firstItem="YgD-rm-3u3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DGr-DV-v3d"/>
+                            <constraint firstItem="YgD-rm-3u3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Rnh-oX-KCW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtMessage" destination="dAB-xh-JdB" id="8E6-W1-vbT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
