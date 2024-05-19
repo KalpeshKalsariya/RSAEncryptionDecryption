@@ -17,24 +17,27 @@ This project demonstrates how to perform RSA encryption and decryption using Swi
 # Installation
 
 1. Clone the repository:
+
 git clone https://github.com/your-username/RSAEncryptionDecryption.git
 
 2. Open the project in Xcode:
+
 cd RSAEncryptionDecryption
+
 open RSAEncryptionDecryption.xcodeproj
 
 # Code Explanation
 # RSAKeyGenerator.swift
 This class is responsible for generating RSA key pairs and performing encryption and decryption.
 
-**generateRSAKeyPair():** Generates an RSA key pair.
-**rsaEncrypt(data:publicKey:):** Encrypts data using the provided public key.
-**rsaDecrypt(data:privateKey:):** Decrypts data using the provided private key.
+- **generateRSAKeyPair():** Generates an RSA key pair.
+- **rsaEncrypt(data:publicKey:):** Encrypts data using the provided public key.
+- **rsaDecrypt(data:privateKey:):** Decrypts data using the provided private key.
 
 # ViewController.swift
 This class handles the user interface and interactions.
 
-**generateKeyPair(strText:):** Generates an RSA key pair, encrypts the given text, and then decrypts the encrypted data.
-**btnTapEncriptDescrypt_Action(_:):** Action method connected to the button. It triggers the key generation, encryption, and decryption process.
+- **generateKeyPair(strText:):** Generates an RSA key pair, encrypts the given text, and then decrypts the encrypted data.
+- **btnTapEncriptDescrypt_Action(_:):** Action method connected to the button. It triggers the key generation, encryption, and decryption process.
 
 
